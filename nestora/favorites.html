@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Saved Properties | NESTORA</title>
+    <meta name="description" content="Your saved NESTORA properties. Favourites are stored privately in your browser and stay available when you return.">
+    <meta name="theme-color" content="#171714">
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="assets/icons/site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/properties.js"></script>
+    <script defer src="js/favorites.js"></script>
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header is-scrolled" data-header>
+        <div class="container header__inner">
+            <a class="logo" href="index.html" aria-label="NESTORA home">
+                <svg class="logo__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true" focusable="false">
+          <rect x="1.2" y="1.2" width="37.6" height="37.6" rx="11" stroke="currentColor" stroke-opacity="0.28" stroke-width="1.4"/>
+          <path d="M11 21.6 20 13.4l9 8.2" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M13.4 20.6V27a1.6 1.6 0 0 0 1.6 1.6h10a1.6 1.6 0 0 0 1.6-1.6v-6.4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="20" cy="24.4" r="1.7" fill="#9e6a44"/>
+        </svg>
+                <span class="logo__text">
+          <span class="logo__name">NESTORA</span>
+                <span class="logo__tag">Find a place that feels like home</span>
+                </span>
+            </a>
+
+            <nav class="nav" aria-label="Primary">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="properties.html?status=Sale">Buy</a></li>
+                    <li><a class="nav__link" href="properties.html?status=Rent">Rent</a></li>
+                    <li><a class="nav__link" href="contact.html?subject=sell">Sell</a></li>
+                    <li><a class="nav__link" href="properties.html">Properties</a></li>
+                    <li><a class="nav__link" href="about.html">About</a></li>
+                    <li><a class="nav__link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <a class="favorites-btn is-active" href="favorites.html" aria-label="Saved properties" aria-current="page">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.4A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg>
+                    <span class="favorites-btn__label">Favorites</span>
+                    <span class="favorites-count" data-favorites-count hidden>0</span>
+                </a>
+                <a class="btn btn--accent" href="contact.html?subject=sell">List Your Property</a>
+                <button class="burger" type="button" data-burger aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="drawer" id="mobile-menu" data-drawer aria-hidden="true">
+        <div class="drawer__scrim"></div>
+        <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+            <button class="drawer__close" type="button" data-drawer-close aria-label="Close menu">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+
+            <nav class="drawer__nav" aria-label="Mobile">
+                <a class="drawer__link" href="properties.html?status=Sale">Buy <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+                <a class="drawer__link" href="properties.html?status=Rent">Rent <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+                <a class="drawer__link" href="contact.html?subject=sell">Sell <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+                <a class="drawer__link" href="properties.html">Properties <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+                <a class="drawer__link" href="about.html">About <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+                <a class="drawer__link" href="contact.html">Contact <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+            </nav>
+            <div class="drawer__foot">
+                <a class="btn btn--accent btn--block" href="contact.html?subject=sell">List Your Property</a>
+                <a class="btn btn--ghost btn--block" href="properties.html">Browse Properties</a>
+                <div class="drawer__meta">
+                    <a href="tel:+2348024157788">+234 802 415 7788</a>
+                    <a href="mailto:hello@nestora.ng">hello@nestora.ng</a>
+                    <span>14B Admiralty Way, Lekki Phase 1, Lagos</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main id="main">
+
+        <section class="page-head">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a>
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+                    <span aria-current="page">Saved properties</span>
+                </nav>
+
+                <p class="eyebrow" style="margin-top:1.4rem">Your shortlist</p>
+                <h1>Saved Properties</h1>
+                <p class="lead">Everything you've hearted, kept in this browser with localStorage so your shortlist is still here when you come back.</p>
+
+                <div style="display:flex;align-items:center;gap:0.8rem;flex-wrap:wrap;margin-top:1.5rem">
+                    <span class="count-banner" id="favorites-summary" hidden></span>
+                    <button class="btn btn--ghost btn--sm" type="button" id="favorites-clear" hidden>Clear all favourites</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section--tight">
+            <div class="container">
+
+                <!-- Saved cards are injected by js/favorites.js -->
+                <div class="grid-properties" id="favorites-grid" hidden></div>
+
+                <!-- Empty state -->
+                <div class="empty-state" id="favorites-empty" hidden>
+                    <span class="empty-state__icon">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.4A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg>
+          </span>
+                    <h2 style="font-size:clamp(1.4rem,2.6vw,1.9rem)">You haven't saved any properties yet.</h2>
+                    <p>Tap the heart on any listing to build a shortlist you can compare, share with family and bring to your inspection.</p>
+                    <a class="btn btn--accent btn--lg" href="properties.html">
+            Explore Properties
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+          </a>
+                </div>
+
+                <!-- Helpful next steps -->
+                <div class="grid-3" style="margin-top:2.6rem">
+                    <article class="feature-card" data-reveal>
+                        <span class="feature-card__icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>
+            </span>
+                        <h3>Book back-to-back viewings</h3>
+                        <p>Send us your shortlist and we'll schedule every inspection in a single afternoon, in a sensible order across town.</p>
+                    </article>
+                    <article class="feature-card" data-reveal data-reveal-delay="80">
+                        <span class="feature-card__icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4H7.5A2.5 2.5 0 0 0 5 6.5v11A2.5 2.5 0 0 0 7.5 20h9A2.5 2.5 0 0 0 19 17.5V9z"/><path d="M14 4v5h5"/></svg>
+            </span>
+                        <h3>Request a comparison</h3>
+                        <p>We'll prepare a side-by-side note on price per square metre, service charges and resale potential for anything you've saved.</p>
+                    </article>
+                    <article class="feature-card" data-reveal data-reveal-delay="160">
+                        <span class="feature-card__icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.4c0 4.3-2.9 7.4-7 9.6-4.1-2.2-7-5.3-7-9.6V6z"/><path d="M9 12l2 2 4-4"/></svg>
+            </span>
+                        <h3>Verify before you commit</h3>
+                        <p>Our team runs title and ownership checks on any shortlisted property before you pay a deposit.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a class="logo" href="index.html" aria-label="NESTORA home">
+                        <svg class="logo__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true" focusable="false">
+              <rect x="1.2" y="1.2" width="37.6" height="37.6" rx="11" stroke="currentColor" stroke-opacity="0.28" stroke-width="1.4"/>
+              <path d="M11 21.6 20 13.4l9 8.2" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13.4 20.6V27a1.6 1.6 0 0 0 1.6 1.6h10a1.6 1.6 0 0 0 1.6-1.6v-6.4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="20" cy="24.4" r="1.7" fill="#9e6a44"/>
+            </svg>
+                        <span class="logo__text">
+              <span class="logo__name">NESTORA</span>
+                        <span class="logo__tag">Find a place that feels like home</span>
+                        </span>
+                    </a>
+                    <p class="footer__about">Nestora is a Lagos-based real estate company helping families, professionals and investors buy, sell, rent and manage property across the city's most desirable corridors.</p>
+
+                    <form class="newsletter" data-newsletter novalidate>
+                        <label class="sr-only" for="newsletter-email">Email address</label>
+                        <input class="input" id="newsletter-email" type="email" name="email" placeholder="Your email for new listings" autocomplete="email" required>
+                        <button class="btn btn--accent" type="submit">Subscribe</button>
+                    </form>
+                </div>
+
+                <div class="footer__col">
+                    <h3 class="footer__title">Explore</h3>
+                    <nav class="footer__links" aria-label="Explore">
+                        <a href="properties.html?status=Sale">Buy a property</a>
+                        <a href="properties.html?status=Rent">Rent a property</a>
+                        <a href="properties.html">All listings</a>
+                        <a href="favorites.html">Saved properties</a>
+                        <a href="index.html#locations">Popular locations</a>
+                    </nav>
+                </div>
+
+                <div class="footer__col">
+                    <h3 class="footer__title">Company</h3>
+                    <nav class="footer__links" aria-label="Company">
+                        <a href="about.html">About Nestora</a>
+                        <a href="about.html#team">Our team</a>
+                        <a href="index.html#services">Services</a>
+                        <a href="contact.html?subject=sell">List your property</a>
+                        <a href="contact.html">Contact us</a>
+                    </nav>
+                </div>
+
+                <div class="footer__col footer__col--contact">
+                    <h3 class="footer__title">Visit or call</h3>
+                    <ul class="footer__contact">
+                        <li>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                            <span>14B Admiralty Way,<br>Lekki Phase 1, Lagos</span>
+                        </li>
+                        <li>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.5h2.2l1.4 3.4-1.6 1.4a11 11 0 0 0 5.1 5.1l1.4-1.6 3.4 1.4v2.2a2 2 0 0 1-2.2 2A15.4 15.4 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"/></svg>
+                            <a href="tel:+2348024157788">+234 802 415 7788</a>
+                        </li>
+                        <li>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M4 7.5l8 5.5 8-5.5"/></svg>
+                            <a href="mailto:hello@nestora.ng">hello@nestora.ng</a>
+                        </li>
+                    </ul>
+                    <div class="socials" style="margin-top:1.2rem">
+                        <a class="social-btn" href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Nestora on Instagram">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg>
+                        </a>
+                        <a class="social-btn" href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="Nestora on LinkedIn">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="M8 10.5V16M8 7.8v.2M12 16v-3.2a1.8 1.8 0 0 1 3.6 0V16"/></svg>
+                        </a>
+                        <a class="social-btn" href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Nestora on Facebook">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M14.5 8.5H17V5h-2.5A3.5 3.5 0 0 0 11 8.5V11H9v3.5h2V21h3.5v-6.5H17L17.5 11H14.5V9.3a.8.8 0 0 1 0-.8z"/></svg>
+                        </a>
+                        <a class="social-btn" href="https://wa.me/2348024157788" target="_blank" rel="noopener" aria-label="Chat with Nestora on WhatsApp">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.7a8 8 0 0 1-11.9 7L4 20l1.4-4A8 8 0 1 1 20 11.7z"/><path d="M9.2 9c.3 2.4 2.2 4.3 4.6 4.6l1-1.3 1.7.9v1.3c-2.9.5-6-2.4-6.6-5.4l1.3-.1z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>© <span data-year>2026</span> Nestora Real Estate Ltd. RC 1840392. All rights reserved.</p>
+                <div class="footer__bottom-links">
+                    <!-- <a href="#" data-demo>Privacy Policy</a>
+                    <a href="#" data-demo>Terms of Service</a>
+                    <a href="#" data-demo>Cookies</a> -->
+                    <p class="footer__credit jokpo-signature">
+                        <span class="jokpo-signature__text">Designed &amp; Developed by</span>
+                        <a class="jokpo-signature__link" href="#home">Jokpo Technologies</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Properties for Sale &amp; Rent in Lagos | NESTORA</title>
+    <meta name="description" content="Browse verified properties for sale and rent across Lekki, Ikoyi, Victoria Island, Ajah and Ikeja. Filter by type, price, bedrooms, bathrooms and size.">
+    <meta name="theme-color" content="#171714">
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="assets/icons/site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/properties.js"></script>
+    <script defer src="js/favorites.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/filters.js"></script>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ======================================================================
+       HEADER (solid on inner pages)
+       ====================================================================== -->
+    <header class="header is-scrolled" data-header>
+        <div class="container header__inner">
+            <a class="logo" href="index.html" aria-label="NESTORA home">
+                <svg class="logo__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true" focusable="false">
+          <rect x="1.2" y="1.2" width="37.6" height="37.6" rx="11" stroke="currentColor" stroke-opacity="0.28" stroke-width="1.4"/>
+          <path d="M11 21.6 20 13.4l9 8.2" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M13.4 20.6V27a1.6 1.6 0 0 0 1.6 1.6h10a1.6 1.6 0 0 0 1.6-1.6v-6.4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="20" cy="24.4" r="1.7" fill="#9e6a44"/>
+        </svg>
+                <span class="logo__text">
+          <span class="logo__name">NESTORA</span>
+                <span class="logo__tag">Find a place that feels like home</span>
+                </span>
+            </a>
+
+            <nav class="nav" aria-label="Primary">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="properties.html?status=Sale">Buy</a></li>
+                    <li><a class="nav__link" href="properties.html?status=Rent">Rent</a></li>
+                    <li><a class="nav__link" href="contact.html?subject=sell">Sell</a></li>
+                    <li><a class="nav__link is-active" href="properties.html" aria-current="page">Properties</a></li>
+                    <li><a class="nav__link" href="about.html">About</a></li>
+                    <li><a class="nav__link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <a class="favorites-btn" href="favorites.html" aria-label="Saved properties">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.4A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg>
+                    <span class="favorites-btn__label">Favorites</span>
+                    <span class="favorites-count" data-favorites-count hidden>0</span>
+                </a>
+                <a class="btn btn--accent" href="contact.html?subject=sell">List Your Property</a>
+                <button class="burger" type="button" data-burger aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="drawer" id="mobile-menu" data-drawer aria-hidden="true">
+        <div class="drawer__scrim"></div>
+        <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+            <button class="drawer__close" type="button" data-drawer-close aria-label="Close menu">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+
+            <nav class="drawer__nav" aria-label="Mobile">
+                <a class="drawer__link" href="properties.html?status=Sale">Buy <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+                <a class="drawer__link" href="properties.html?status=Rent">Rent <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+                <a class="drawer__link" href="contact.html?subject=sell">Sell <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+                <a class="drawer__link" href="properties.html">Properties <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+                <a class="drawer__link" href="about.html">About <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+                <a class="drawer__link" href="contact.html">Contact <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+            </nav>
+            <div class="drawer__foot">
+                <a class="btn btn--accent btn--block" href="contact.html?subject=sell">List Your Property</a>
+                <a class="btn btn--ghost btn--block" href="favorites.html">Saved Properties</a>
+                <div class="drawer__meta">
+                    <a href="tel:+2348024157788">+234 802 415 7788</a>
+                    <a href="mailto:hello@nestora.ng">hello@nestora.ng</a>
+                    <span>14B Admiralty Way, Lekki Phase 1, Lagos</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main id="main">
+
+        <!-- ====================================================================
+         PAGE HEAD + SEARCH
+         ==================================================================== -->
+        <section class="page-head">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a>
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+                    <span aria-current="page">Properties</span>
+                </nav>
+
+                <p class="eyebrow" style="margin-top:1.4rem">The portfolio</p>
+                <h1>Properties for sale and rent in Lagos</h1>
+                <p class="lead">Search by location or property name, then narrow the list with the filters. Everything you see here has been inspected, priced and verified by a Nestora consultant.</p>
+
+                <!-- Search bar: location OR property name -->
+                <div class="search" style="margin-top:2rem;animation:none">
+                    <div class="input-icon" style="position:relative">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+                        <input class="input" type="search" id="search-input" list="listings-areas" placeholder="Search by location or property name — e.g. “Lekki”, “Penthouse”, “Azure Heights”" autocomplete="off" aria-label="Search properties by location or name" style="padding-right:6.5rem">
+                        <button class="btn btn--ghost btn--sm" type="button" id="search-clear" style="position:absolute;right:0.55rem;top:50%;transform:translateY(-50%)">Clear</button>
+                    </div>
+                    <datalist id="listings-areas"><!-- populated from the property data --></datalist>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+         LISTING LAYOUT
+         ==================================================================== -->
+        <section class="section section--tight" id="results">
+            <div class="container">
+                <div class="listing-layout">
+
+                    <!-- ---------------- FILTER SIDEBAR ---------------- -->
+                    <aside class="filters" id="filters-panel" aria-label="Property filters" aria-hidden="false">
+                        <div class="filters__head">
+                            <h2 class="filters__title">Filters</h2>
+                            <button class="filters__clear" type="reset" form="filters-form">Clear all</button>
+                        </div>
+
+                        <form id="filters-form" novalidate>
+                            <!-- Buy / Rent / Any -->
+                            <div class="filters__group">
+                                <p class="filters__legend" id="legend-status">I want to</p>
+                                <div class="segmented" role="radiogroup" aria-labelledby="legend-status">
+                                    <label>
+                    <input type="radio" name="status" value="Any" checked>
+                    <span>Any</span>
+                  </label>
+                                    <label>
+                    <input type="radio" name="status" value="Sale">
+                    <span>Buy</span>
+                  </label>
+                                    <label>
+                    <input type="radio" name="status" value="Rent">
+                    <span>Rent</span>
+                  </label>
+                                </div>
+                            </div>
+
+                            <!-- Property type -->
+                            <div class="filters__group">
+                                <label class="filters__legend" for="filter-type">Property type</label>
+                                <select class="select" id="filter-type" name="type">
+                  <option value="Any">All property types</option>
+                  <option value="Apartment">Apartment</option>
+                  <option value="House">House</option>
+                  <option value="Villa">Villa</option>
+                  <option value="Duplex">Duplex</option>
+                  <option value="Penthouse">Penthouse</option>
+                  <option value="Commercial">Commercial</option>
+                </select>
+                            </div>
+
+                            <!-- Price -->
+                            <div class="filters__group">
+                                <p class="filters__legend">Price range (₦)</p>
+                                <div class="price-row">
+                                    <label class="sr-only" for="filter-min">Minimum price</label>
+                                    <select class="select" id="filter-min" name="min">
+                    <option value="">Min</option>
+                    <option value="5000000">₦5M</option>
+                    <option value="20000000">₦20M</option>
+                    <option value="50000000">₦50M</option>
+                    <option value="100000000">₦100M</option>
+                    <option value="200000000">₦200M</option>
+                    <option value="300000000">₦300M</option>
+                  </select>
+                                    <label class="sr-only" for="filter-max">Maximum price</label>
+                                    <select class="select" id="filter-max" name="max">
+                    <option value="">Max</option>
+                    <option value="30000000">₦30M</option>
+                    <option value="75000000">₦75M</option>
+                    <option value="150000000">₦150M</option>
+                    <option value="250000000">₦250M</option>
+                    <option value="350000000">₦350M</option>
+                    <option value="500000000">₦500M</option>
+                  </select>
+                                </div>
+                            </div>
+
+                            <!-- Bedrooms -->
+                            <div class="filters__group">
+                                <p class="filters__legend" id="legend-beds">Bedrooms</p>
+                                <div class="pill-group" role="radiogroup" aria-labelledby="legend-beds">
+                                    <label><input type="radio" name="beds" value="" checked><span>Any</span></label>
+                                    <label><input type="radio" name="beds" value="1"><span>1+</span></label>
+                                    <label><input type="radio" name="beds" value="2"><span>2+</span></label>
+                                    <label><input type="radio" name="beds" value="3"><span>3+</span></label>
+                                    <label><input type="radio" name="beds" value="4"><span>4+</span></label>
+                                    <label><input type="radio" name="beds" value="5"><span>5+</span></label>
+                                </div>
+                            </div>
+
+                            <!-- Bathrooms -->
+                            <div class="filters__group">
+                                <p class="filters__legend" id="legend-baths">Bathrooms</p>
+                                <div class="pill-group" role="radiogroup" aria-labelledby="legend-baths">
+                                    <label><input type="radio" name="baths" value="" checked><span>Any</span></label>
+                                    <label><input type="radio" name="baths" value="1"><span>1+</span></label>
+                                    <label><input type="radio" name="baths" value="2"><span>2+</span></label>
+                                    <label><input type="radio" name="baths" value="3"><span>3+</span></label>
+                                    <label><input type="radio" name="baths" value="4"><span>4+</span></label>
+                                    <label><input type="radio" name="baths" value="5"><span>5+</span></label>
+                                </div>
+                            </div>
+
+                            <!-- Size -->
+                            <div class="filters__group">
+                                <label class="filters__legend" for="filter-size">Minimum size</label>
+                                <select class="select" id="filter-size" name="size">
+                  <option value="">Any size</option>
+                  <option value="200">200 m² and above</option>
+                  <option value="300">300 m² and above</option>
+                  <option value="400">400 m² and above</option>
+                  <option value="500">500 m² and above</option>
+                  <option value="700">700 m² and above</option>
+                </select>
+                            </div>
+
+                            <div class="filters__group">
+                                <button class="btn btn--ghost btn--block" type="reset">Clear filters</button>
+                                <p class="form-note" style="margin-top:0.8rem;text-align:center">Results update as you change filters.</p>
+                            </div>
+                        </form>
+                    </aside>
+
+                    <!-- ---------------- RESULTS ---------------- -->
+                    <div>
+                        <div class="listings-toolbar" style="display:flex;align-items:center;gap:0.6rem;flex-wrap:wrap;margin-bottom:1.1rem">
+                            <button class="btn btn--ghost filter-toggle" type="button" id="filters-toggle" aria-expanded="false" aria-controls="filters-panel">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h10M18 8h2M4 16h4M12 16h8"/><circle cx="16" cy="8" r="2"/><circle cx="10" cy="16" r="2"/></svg>
+                Filters
+                <span class="favorites-count" id="filters-toggle-badge" hidden>0</span>
+              </button>
+
+                            <div class="pill-list" style="flex:1">
+                                <button class="chip is-active" type="button" data-preset="all">All listings</button>
+                                <button class="chip" type="button" data-preset="sale">For Sale</button>
+                                <button class="chip" type="button" data-preset="rent">For Rent</button>
+                                <button class="chip" type="button" data-preset="Apartment">Apartments</button>
+                                <button class="chip" type="button" data-preset="Villa">Villas</button>
+                                <button class="chip" type="button" data-preset="Penthouse">Penthouses</button>
+                                <button class="chip" type="button" data-preset="Commercial">Commercial</button>
+                            </div>
+                        </div>
+
+                        <div class="results-bar">
+                            <p class="results-count" id="results-count"><b>0</b> Properties Found</p>
+                            <div class="results-bar__right">
+                                <p class="text-sm text-muted" id="results-summary"></p>
+                                <div class="sort-wrap">
+                                    <label for="sort-select">Sort</label>
+                                    <select class="select" id="sort-select">
+                    <option value="newest">Newest</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="size-desc">Largest</option>
+                    <option value="popular">Most Popular</option>
+                  </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="active-filters" id="active-filters" aria-live="polite"></div>
+
+                        <!-- Cards injected by js/filters.js -->
+                        <div class="grid-properties" id="results-grid"></div>
+
+                        <!-- Empty state -->
+                        <div class="empty-state" id="results-empty" hidden>
+                            <span class="empty-state__icon">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+              </span>
+                            <h3>No properties found<span id="results-empty-query"></span></h3>
+                            <p>Try widening your price range, removing a filter, or searching a different Lagos neighbourhood.</p>
+                            <div style="display:flex;gap:0.6rem;justify-content:center;flex-wrap:wrap">
+                                <button class="btn btn--accent" type="button" data-clear-all>Clear filters</button>
+                                <a class="btn btn--ghost" href="contact.html">Tell us what you need</a>
+                            </div>
+                        </div>
+
+                        <div class="pagination" id="results-pagination" aria-label="Pagination"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+         HELP BAND
+         ==================================================================== -->
+        <section class="section section--tight">
+            <div class="container">
+                <div class="panel panel--dark" style="display:flex;gap:1.5rem;align-items:center;justify-content:space-between;flex-wrap:wrap;border-radius:var(--r-xl);padding:clamp(1.4rem,3vw,2.2rem)">
+                    <div style="max-width:60ch">
+                        <h2 style="font-size:clamp(1.35rem,2.4vw,1.9rem)">Can't find the right property?</h2>
+                        <p style="margin-top:0.6rem">Tell our consultants what you're looking for — budget, area, must-haves — and we'll send you off-market options that never reach the website.</p>
+                    </div>
+                    <div style="display:flex;gap:0.6rem;flex-wrap:wrap">
+                        <a class="btn btn--accent btn--lg" href="contact.html?subject=buy">Request Off-Market Listings</a>
+                        <a class="btn btn--outline-light btn--lg" href="tel:+2348024157788">Call +234 802 415 7788</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a class="logo" href="index.html" aria-label="NESTORA home">
+                        <svg class="logo__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true" focusable="false">
+              <rect x="1.2" y="1.2" width="37.6" height="37.6" rx="11" stroke="currentColor" stroke-opacity="0.28" stroke-width="1.4"/>
+              <path d="M11 21.6 20 13.4l9 8.2" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13.4 20.6V27a1.6 1.6 0 0 0 1.6 1.6h10a1.6 1.6 0 0 0 1.6-1.6v-6.4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="20" cy="24.4" r="1.7" fill="#9e6a44"/>
+            </svg>
+                        <span class="logo__text">
+              <span class="logo__name">NESTORA</span>
+                        <span class="logo__tag">Find a place that feels like home</span>
+                        </span>
+                    </a>
+                    <p class="footer__about">Nestora is a Lagos-based real estate company helping families, professionals and investors buy, sell, rent and manage property across the city's most desirable corridors.</p>
+
+                    <form class="newsletter" data-newsletter novalidate>
+                        <label class="sr-only" for="newsletter-email">Email address</label>
+                        <input class="input" id="newsletter-email" type="email" name="email" placeholder="Your email for new listings" autocomplete="email" required>
+                        <button class="btn btn--accent" type="submit">Subscribe</button>
+                    </form>
+                </div>
+
+                <div class="footer__col">
+                    <h3 class="footer__title">Explore</h3>
+                    <nav class="footer__links" aria-label="Explore">
+                        <a href="properties.html?status=Sale">Buy a property</a>
+                        <a href="properties.html?status=Rent">Rent a property</a>
+                        <a href="properties.html">All listings</a>
+                        <a href="favorites.html">Saved properties</a>
+                        <a href="index.html#locations">Popular locations</a>
+                    </nav>
+                </div>
+
+                <div class="footer__col">
+                    <h3 class="footer__title">Company</h3>
+                    <nav class="footer__links" aria-label="Company">
+                        <a href="about.html">About Nestora</a>
+                        <a href="about.html#team">Our team</a>
+                        <a href="index.html#services">Services</a>
+                        <a href="contact.html?subject=sell">List your property</a>
+                        <a href="contact.html">Contact us</a>
+                    </nav>
+                </div>
+
+                <div class="footer__col footer__col--contact">
+                    <h3 class="footer__title">Visit or call</h3>
+                    <ul class="footer__contact">
+                        <li>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                            <span>14B Admiralty Way,<br>Lekki Phase 1, Lagos</span>
+                        </li>
+                        <li>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.5h2.2l1.4 3.4-1.6 1.4a11 11 0 0 0 5.1 5.1l1.4-1.6 3.4 1.4v2.2a2 2 0 0 1-2.2 2A15.4 15.4 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"/></svg>
+                            <a href="tel:+2348024157788">+234 802 415 7788</a>
+                        </li>
+                        <li>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M4 7.5l8 5.5 8-5.5"/></svg>
+                            <a href="mailto:hello@nestora.ng">hello@nestora.ng</a>
+                        </li>
+                    </ul>
+                    <div class="socials" style="margin-top:1.2rem">
+                        <a class="social-btn" href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Nestora on Instagram">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg>
+                        </a>
+                        <a class="social-btn" href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="Nestora on LinkedIn">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="M8 10.5V16M8 7.8v.2M12 16v-3.2a1.8 1.8 0 0 1 3.6 0V16"/></svg>
+                        </a>
+                        <a class="social-btn" href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Nestora on Facebook">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M14.5 8.5H17V5h-2.5A3.5 3.5 0 0 0 11 8.5V11H9v3.5h2V21h3.5v-6.5H17L17.5 11H14.5V9.3a.8.8 0 0 1 0-.8z"/></svg>
+                        </a>
+                        <a class="social-btn" href="https://wa.me/2348024157788" target="_blank" rel="noopener" aria-label="Chat with Nestora on WhatsApp">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.7a8 8 0 0 1-11.9 7L4 20l1.4-4A8 8 0 1 1 20 11.7z"/><path d="M9.2 9c.3 2.4 2.2 4.3 4.6 4.6l1-1.3 1.7.9v1.3c-2.9.5-6-2.4-6.6-5.4l1.3-.1z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>© <span data-year>2026</span> Nestora Real Estate Ltd. RC 1840392. All rights reserved.</p>
+                <div class="footer__bottom-links">
+                    <!-- <a href="#" data-demo>Privacy Policy</a>
+                    <a href="#" data-demo>Terms of Service</a>
+                    <a href="#" data-demo>Cookies</a> -->
+                    <p class="footer__credit jokpo-signature">
+                        <span class="jokpo-signature__text">Designed &amp; Developed by</span>
+                        <a class="jokpo-signature__link" href="#home">Jokpo Technologies</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

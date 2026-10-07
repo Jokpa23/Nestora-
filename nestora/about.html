@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About NESTORA — Real estate, made personal</title>
+    <meta name="description" content="NESTORA is a Lagos real estate company built on verified listings, trusted agents and deep local knowledge. Read our story, values and meet the team.">
+    <meta name="theme-color" content="#171714">
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="assets/icons/site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/properties.js"></script>
+    <script defer src="js/favorites.js"></script>
+    <script defer src="js/main.js"></script>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <header class="header is-scrolled" data-header>
+        <div class="container header__inner">
+            <a class="logo" href="index.html" aria-label="NESTORA home">
+                <svg class="logo__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true" focusable="false">
+          <rect x="1.2" y="1.2" width="37.6" height="37.6" rx="11" stroke="currentColor" stroke-opacity="0.28" stroke-width="1.4"/>
+          <path d="M11 21.6 20 13.4l9 8.2" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M13.4 20.6V27a1.6 1.6 0 0 0 1.6 1.6h10a1.6 1.6 0 0 0 1.6-1.6v-6.4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="20" cy="24.4" r="1.7" fill="#9e6a44"/>
+        </svg>
+                <span class="logo__text">
+          <span class="logo__name">NESTORA</span>
+                <span class="logo__tag">Find a place that feels like home</span>
+                </span>
+            </a>
+
+            <nav class="nav" aria-label="Primary">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="properties.html?status=Sale">Buy</a></li>
+                    <li><a class="nav__link" href="properties.html?status=Rent">Rent</a></li>
+                    <li><a class="nav__link" href="contact.html?subject=sell">Sell</a></li>
+                    <li><a class="nav__link" href="properties.html">Properties</a></li>
+                    <li><a class="nav__link is-active" href="about.html" aria-current="page">About</a></li>
+                    <li><a class="nav__link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <a class="favorites-btn" href="favorites.html" aria-label="Saved properties">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.4A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg>
+                    <span class="favorites-btn__label">Favorites</span>
+                    <span class="favorites-count" data-favorites-count hidden>0</span>
+                </a>
+                <a class="btn btn--accent" href="contact.html?subject=sell">List Your Property</a>
+                <button class="burger" type="button" data-burger aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="drawer" id="mobile-menu" data-drawer aria-hidden="true">
+        <div class="drawer__scrim"></div>
+        <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+            <button class="drawer__close" type="button" data-drawer-close aria-label="Close menu">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+
+            <nav class="drawer__nav" aria-label="Mobile">
+                <a class="drawer__link" href="properties.html?status=Sale">Buy <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+                <a class="drawer__link" href="properties.html?status=Rent">Rent <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+                <a class="drawer__link" href="contact.html?subject=sell">Sell <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+                <a class="drawer__link" href="properties.html">Properties <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+                <a class="drawer__link" href="about.html">About <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+                <a class="drawer__link" href="contact.html">Contact <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+            </nav>
+            <div class="drawer__foot">
+                <a class="btn btn--accent btn--block" href="contact.html?subject=sell">List Your Property</a>
+                <a class="btn btn--ghost btn--block" href="favorites.html">Saved Properties</a>
+                <div class="drawer__meta">
+                    <a href="tel:+2348024157788">+234 802 415 7788</a>
+                    <a href="mailto:hello@nestora.ng">hello@nestora.ng</a>
+                    <span>14B Admiralty Way, Lekki Phase 1, Lagos</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main id="main">
+
+        <!-- ====================================================================
+         HERO
+         ==================================================================== -->
+        <section class="page-head">
+            <div class="container">
+                <nav class="breadcrumb" aria-label="Breadcrumb">
+                    <a href="index.html">Home</a>
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+                    <span aria-current="page">About</span>
+                </nav>
+                <p class="eyebrow" style="margin-top:1.4rem">Since 2008</p>
+                <h1>Real estate, made personal.</h1>
+                <p class="lead">We are a Lagos-born property company built on a simple belief: buying a home should feel like being looked after, not like taking a gamble. Eighteen years, 4,200 families and one city we know intimately.</p>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+         OUR STORY
+         ==================================================================== -->
+        <section class="section">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="media-frame reveal-img" data-reveal="left">
+                        <!-- Replace assets/images/pages/about.webp with your own office / team photo -->
+                        <img src="assets/images/pages/about.webp" alt="The Nestora advisory team at work in their Lekki office" width="1400" height="1050" loading="lazy" decoding="async">
+                        <p class="media-frame__tag">Our advisory desk · Lekki Phase 1</p>
+                    </div>
+
+                    <div data-reveal="right">
+                        <p class="eyebrow">Our Story</p>
+                        <h2 style="margin-top:0.9rem">From one office on Admiralty Way</h2>
+                        <div class="prose" style="margin-top:1.1rem">
+                            <p>Nestora began in 2008 with two consultants, a filing cabinet and a firm rule: never list a property we hadn't walked through ourselves. In a market where listings are often copied and re-posted without verification, that rule
+                                turned out to be the whole business.</p>
+                            <p>Today we advise buyers, sellers, landlords and institutional investors across Lekki, Ikoyi, Victoria Island, Ajah and Ikeja. Our team has grown to 34 people — consultants, valuers, a legal desk and a property management unit
+                                — but the discipline hasn't changed. Every listing on this website has been inspected, priced against real comparables and documented.</p>
+                            <p>We are deliberately a Lagos specialist. We would rather know five corridors exceptionally well than claim to cover a country.</p>
+                        </div>
+
+                        <div class="stats" style="margin-top:2rem;grid-template-columns:repeat(2,1fr)">
+                            <div class="stat">
+                                <p class="stat__value" data-count="34" data-suffix="">34</p>
+                                <p class="stat__label">People on the team</p>
+                            </div>
+                            <div class="stat">
+                                <p class="stat__value" data-count="4200" data-suffix="+">4,200+</p>
+                                <p class="stat__label">Clients housed</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+         MISSION
+         ==================================================================== -->
+        <section class="section section--dark">
+            <div class="container">
+                <div class="grid-2" style="align-items:center">
+                    <div data-reveal>
+                        <p class="eyebrow" style="color:var(--gold)">Our Mission</p>
+                        <h2 style="margin-top:0.9rem">Make property in Lagos transparent, verified and calm.</h2>
+                        <p class="lead" style="margin-top:1.1rem">We exist to remove the anxiety from Nigerian real estate: no fake listings, no undisclosed service charges, no pressure tactics, no disappearing agents once money changes hands.</p>
+                        <div class="pill-list" style="margin-top:1.6rem">
+                            <span class="badge badge--soft">Verified listings only</span>
+                            <span class="badge badge--soft">Documented pricing</span>
+                            <span class="badge badge--soft">One named consultant</span>
+                            <span class="badge badge--soft">Post-completion support</span>
+                        </div>
+                    </div>
+
+                    <div class="grid-2" style="gap:1rem" data-reveal="right">
+                        <div class="feature-card">
+                            <span class="feature-card__icon">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.4c0 4.3-2.9 7.4-7 9.6-4.1-2.2-7-5.3-7-9.6V6z"/><path d="M9 12l2 2 4-4"/></svg>
+              </span>
+                            <h3>Integrity</h3>
+                            <p>We disclose what we know — including the awkward parts — before you commit a naira.</p>
+                        </div>
+                        <div class="feature-card">
+                            <span class="feature-card__icon">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M14.8 9.2l-1.6 4.2-4.2 1.6 1.6-4.2z"/></svg>
+              </span>
+                            <h3>Local depth</h3>
+                            <p>Estate by estate, street by street. We know which roads flood and which estates deliver.</p>
+                        </div>
+                        <div class="feature-card">
+                            <span class="feature-card__icon">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4l1.6 4.4L18 10l-4.4 1.6L12 16l-1.6-4.4L6 10l4.4-1.6z"/><path d="M18.5 15.5l.7 1.8 1.8.7-1.8.7-.7 1.8-.7-1.8-1.8-.7 1.8-.7z"/></svg>
+              </span>
+                            <h3>Care</h3>
+                            <p>We answer after the sale, because most of our business still comes from referrals.</p>
+                        </div>
+                        <div class="feature-card">
+                            <span class="feature-card__icon">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20h16"/><path d="M7 20v-6M12 20V6M17 20v-9"/></svg>
+              </span>
+                            <h3>Discipline</h3>
+                            <p>Real comparables, honest valuations, and advice that protects your long-term return.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+         TIMELINE
+         ==================================================================== -->
+        <section class="section" id="story">
+            <div class="container">
+                <div class="section-head">
+                    <p class="eyebrow">Our growth</p>
+                    <h2>Eighteen years, one city</h2>
+                    <p class="lead">A few milestones from the Nestora story — the moments that shaped how we work today.</p>
+                </div>
+
+                <div class="timeline" style="margin-top:2.8rem">
+                    <article class="timeline__item" data-reveal>
+                        <span class="timeline__dot" aria-hidden="true"></span>
+                        <p class="timeline__year">2008</p>
+                        <h3 class="timeline__title">Nestora opens in Lekki Phase 1</h3>
+                        <p class="timeline__text">Two consultants, one office and a promise to personally inspect every property before it is listed. The first year closes with 26 lettings.</p>
+                    </article>
+
+                    <article class="timeline__item" data-reveal>
+                        <span class="timeline__dot" aria-hidden="true"></span>
+                        <p class="timeline__year">2012</p>
+                        <h3 class="timeline__title">Sales division and legal desk launched</h3>
+                        <p class="timeline__text">We bring title verification and conveyancing support in-house so buyers get clean documentation without chasing three separate vendors.</p>
+                    </article>
+
+                    <article class="timeline__item" data-reveal>
+                        <span class="timeline__dot" aria-hidden="true"></span>
+                        <p class="timeline__year">2016</p>
+                        <h3 class="timeline__title">Property management unit founded</h3>
+                        <p class="timeline__text">Landlords hand us the keys; we handle tenant vetting, rent collection, maintenance and reporting. It now manages over 300 units.</p>
+                    </article>
+
+                    <article class="timeline__item" data-reveal>
+                        <span class="timeline__dot" aria-hidden="true"></span>
+                        <p class="timeline__year">2019</p>
+                        <h3 class="timeline__title">Ikoyi and Victoria Island coverage</h3>
+                        <p class="timeline__text">Two new advisory teams open on the Island, extending our reach to prime residential and commercial stock.</p>
+                    </article>
+
+                    <article class="timeline__item" data-reveal>
+                        <span class="timeline__dot" aria-hidden="true"></span>
+                        <p class="timeline__year">2022</p>
+                        <h3 class="timeline__title">Investment advisory practice</h3>
+                        <p class="timeline__text">We start publishing quarterly price-per-square-metre notes and advising diaspora clients on Lagos land acquisitions.</p>
+                    </article>
+
+                    <article class="timeline__item" data-reveal>
+                        <span class="timeline__dot" aria-hidden="true"></span>
+                        <p class="timeline__year">2026</p>
+                        <h3 class="timeline__title">1,240 verified listings and counting</h3>
+                        <p class="timeline__text">A digital-first portfolio, 34 people and a 4.9 average client rating across Google and PropertyPro reviews.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+         OUR VALUES
+         ==================================================================== -->
+        <section class="section section--sand" id="values">
+            <div class="container">
+                <div class="section-head">
+                    <p class="eyebrow">Our Values</p>
+                    <h2>What we hold ourselves to</h2>
+                </div>
+
+                <div class="grid-4" style="margin-top:2.4rem">
+                    <article class="feature-card" data-reveal>
+                        <span class="feature-card__icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.4c0 4.3-2.9 7.4-7 9.6-4.1-2.2-7-5.3-7-9.6V6z"/><path d="M9 12l2 2 4-4"/></svg>
+            </span>
+                        <h3>Verified before listed</h3>
+                        <p>No listing reaches this website until a consultant has seen it, photographed it and checked its paperwork.</p>
+                    </article>
+
+                    <article class="feature-card" data-reveal data-reveal-delay="80">
+                        <span class="feature-card__icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><path d="M3.5 19a5.5 5.5 0 0 1 11 0"/><path d="M16 5.4a3.2 3.2 0 0 1 0 6.2"/><path d="M17.5 19a5.5 5.5 0 0 0-2.2-4.4"/></svg>
+            </span>
+                        <h3>One consultant, start to finish</h3>
+                        <p>You don't get passed around a call centre. The person who shows you the property handles your paperwork.</p>
+                    </article>
+
+                    <article class="feature-card" data-reveal data-reveal-delay="160">
+                        <span class="feature-card__icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M14.8 9.2l-1.6 4.2-4.2 1.6 1.6-4.2z"/></svg>
+            </span>
+                        <h3>Clear, written pricing</h3>
+                        <p>Price, service charge, agency and legal fees — in writing, before you make any commitment.</p>
+                    </article>
+
+                    <article class="feature-card" data-reveal data-reveal-delay="240">
+                        <span class="feature-card__icon">
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.7a8 8 0 0 1-11.9 7L4 20l1.4-4A8 8 0 1 1 20 11.7z"/><path d="M9.2 9c.3 2.4 2.2 4.3 4.6 4.6l1-1.3 1.7.9v1.3c-2.9.5-6-2.4-6.6-5.4l1.3-.1z"/></svg>
+            </span>
+                        <h3>Reachable, always</h3>
+                        <p>Phone, WhatsApp and email on every listing — and a response within one business hour, in writing.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+         OUR TEAM
+         ==================================================================== -->
+        <section class="section" id="team">
+            <div class="container">
+                <div class="section-head-row section-head">
+                    <div>
+                        <p class="eyebrow">Our Team</p>
+                        <h2>The people behind the portfolio</h2>
+                        <p class="lead">Consultants, valuers and property managers who live in the neighbourhoods they sell.</p>
+                    </div>
+                    <a class="link-arrow" href="contact.html">
+            Book a consultation
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+          </a>
+                </div>
+
+                <div class="grid-4" style="margin-top:2.4rem">
+                    <article class="team-card" data-reveal>
+                        <div class="team-card__media">
+                            <!-- Replace assets/images/agents/agent-01.webp with the real consultant photo -->
+                            <img src="assets/images/agents/agent-01.webp" alt="David Williams, Senior Property Consultant at Nestora" width="720" height="900" loading="lazy" decoding="async">
+                        </div>
+                        <div class="team-card__body">
+                            <h3 class="team-card__name">David Williams</h3>
+                            <p class="team-card__role">Senior Property Consultant</p>
+                            <p class="team-card__bio">Twelve years in Lekki and Ikoyi sales. David leads our owner-occupier practice and has closed over ₦18B in residential transactions.</p>
+                            <div class="team-card__links">
+                                <a href="tel:+2348024157788" aria-label="Call David Williams">
+                                    <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 3.5h2.2l1.4 3.4-1.6 1.4a11 11 0 0 0 5.1 5.1l1.4-1.6 3.4 1.4v2.2a2 2 0 0 1-2.2 2A15.4 15.4 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"/></svg>
+                                </a>
+                                <a href="mailto:david.williams@nestora.ng" aria-label="Email David Williams">
+                                    <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M4 7.5l8 5.5 8-5.5"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="team-card" data-reveal data-reveal-delay="80">
+                        <div class="team-card__media">
+                            <img src="assets/images/agents/agent-02.webp" alt="Amaka Okafor, Luxury Homes Advisor at Nestora" width="720" height="900" loading="lazy" decoding="async">
+                        </div>
+                        <div class="team-card__body">
+                            <h3 class="team-card__name">Amaka Okafor</h3>
+                            <p class="team-card__role">Luxury Homes Advisor</p>
+                            <p class="team-card__bio">Amaka advises prime residential clients on the Island, with a focus on Bananaland, Old Ikoyi and waterfront apartments.</p>
+                            <div class="team-card__links">
+                                <a href="tel:+2348036621094" aria-label="Call Amaka Okafor">
+                                    <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 3.5h2.2l1.4 3.4-1.6 1.4a11 11 0 0 0 5.1 5.1l1.4-1.6 3.4 1.4v2.2a2 2 0 0 1-2.2 2A15.4 15.4 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"/></svg>
+                                </a>
+                                <a href="mailto:amaka.okafor@nestora.ng" aria-label="Email Amaka Okafor">
+                                    <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M4 7.5l8 5.5 8-5.5"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="team-card" data-reveal data-reveal-delay="160">
+                        <div class="team-card__media">
+                            <img src="assets/images/agents/agent-03.webp" alt="Tunde Bello, Investment and Land Specialist at Nestora" width="720" height="900" loading="lazy" decoding="async">
+                        </div>
+                        <div class="team-card__body">
+                            <h3 class="team-card__name">Tunde Bello</h3>
+                            <p class="team-card__role">Investment &amp; Land Specialist</p>
+                            <p class="team-card__bio">Tunde sources land and off-market investments along the Lekki-Epe corridor and publishes our quarterly market notes.</p>
+                            <div class="team-card__links">
+                                <a href="tel:+2348052194471" aria-label="Call Tunde Bello">
+                                    <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 3.5h2.2l1.4 3.4-1.6 1.4a11 11 0 0 0 5.1 5.1l1.4-1.6 3.4 1.4v2.2a2 2 0 0 1-2.2 2A15.4 15.4 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"/></svg>
+                                </a>
+                                <a href="mailto:tunde.bello@nestora.ng" aria-label="Email Tunde Bello">
+                                    <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M4 7.5l8 5.5 8-5.5"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="team-card" data-reveal data-reveal-delay="240">
+                        <div class="team-card__media">
+                            <img src="assets/images/agents/agent-04.webp" alt="Grace Adeyemi, Lettings Manager at Nestora" width="720" height="900" loading="lazy" decoding="async">
+                        </div>
+                        <div class="team-card__body">
+                            <h3 class="team-card__name">Grace Adeyemi</h3>
+                            <p class="team-card__role">Lettings Manager</p>
+                            <p class="team-card__bio">Grace runs our rental portfolio and property management unit, overseeing 300+ tenancies across mainland Lagos.</p>
+                            <div class="team-card__links">
+                                <a href="tel:+2348073348820" aria-label="Call Grace Adeyemi">
+                                    <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6.6 3.5h2.2l1.4 3.4-1.6 1.4a11 11 0 0 0 5.1 5.1l1.4-1.6 3.4 1.4v2.2a2 2 0 0 1-2.2 2A15.4 15.4 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"/></svg>
+                                </a>
+                                <a href="mailto:grace.adeyemi@nestora.ng" aria-label="Email Grace Adeyemi">
+                                    <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M4 7.5l8 5.5 8-5.5"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+         WHY CLIENTS CHOOSE US
+         ==================================================================== -->
+        <section class="section section--sand-deep" id="why-clients">
+            <div class="container">
+                <div class="grid-2" style="align-items:start">
+                    <div data-reveal>
+                        <p class="eyebrow">Why clients choose us</p>
+                        <h2 style="margin-top:0.9rem">Answers before you have to ask</h2>
+                        <p class="lead" style="margin-top:1rem">The questions clients ask us most — answered honestly, so you can decide whether we're the right fit.</p>
+
+                        <div class="media-frame reveal-img" style="margin-top:2rem">
+                            <img src="assets/images/pages/team.webp" alt="Nestora consultants reviewing property plans with a client" width="1400" height="933" loading="lazy" decoding="async">
+                            <span class="badge-float">
+                <span class="badge-float__value">4.9/5</span>
+                            <span class="badge-float__label">Average rating from 860+ client reviews</span>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="accordion" data-reveal="right">
+                        <div class="accordion__item is-open">
+                            <button class="accordion__trigger" type="button" aria-expanded="true">
+                Do you charge buyers for viewings?
+                <span class="accordion__icon" aria-hidden="true">
+                  <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+              </button>
+                            <div class="accordion__panel">
+                                <p>No. Inspections are free and you are never obliged to use our in-house legal or mortgage partners. We are paid by the vendor or landlord on completion.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item">
+                            <button class="accordion__trigger" type="button" aria-expanded="false">
+                How do you verify a property's title?
+                <span class="accordion__icon" aria-hidden="true">
+                  <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+              </button>
+                            <div class="accordion__panel">
+                                <p>Our legal desk runs a Land Registry search, checks the survey plan against the physical boundaries and confirms ownership identity. Where a title has gaps, we tell you before you pay — and tell you what it will take to
+                                    fix.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item">
+                            <button class="accordion__trigger" type="button" aria-expanded="false">
+                Can you help if I live abroad?
+                <span class="accordion__icon" aria-hidden="true">
+                  <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+              </button>
+                            <div class="accordion__panel">
+                                <p>Yes. Roughly a third of our buyers are diaspora clients. We run live video inspections, act as your eyes on site, hold documentation in escrow-style milestones and report progress in writing at every stage.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item">
+                            <button class="accordion__trigger" type="button" aria-expanded="false">
+                What fees should I expect as a landlord?
+                <span class="accordion__icon" aria-hidden="true">
+                  <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+              </button>
+                            <div class="accordion__panel">
+                                <p>Standard letting commission (10% of annual rent) plus 5% management fee if you'd like us to handle collection, maintenance and reporting. All fees are quoted in writing before we market your property.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion__item">
+                            <button class="accordion__trigger" type="button" aria-expanded="false">
+                How quickly can I see a property?
+                <span class="accordion__icon" aria-hidden="true">
+                  <svg class="icon icon--sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+                </span>
+              </button>
+                            <div class="accordion__panel">
+                                <p>Most inspections are scheduled within 24–48 hours, including weekends. Submit a request from any listing and your consultant will confirm the exact time by phone and email.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+         CTA
+         ==================================================================== -->
+        <section class="section section--tight">
+            <div class="container">
+                <div class="cta-band" data-reveal="zoom">
+                    <img class="cta-band__bg" src="assets/images/pages/cta.webp" alt="" width="1600" height="700" loading="lazy" decoding="async" aria-hidden="true">
+                    <div class="cta-band__inner">
+                        <p class="eyebrow" style="color:var(--gold)">Let's talk</p>
+                        <h2 style="margin-top:0.9rem">Start with a conversation, not a contract</h2>
+                        <p>Tell us what you're trying to achieve — buying, selling, letting or investing — and we'll tell you honestly what's realistic in the current Lagos market.</p>
+                        <div class="cta-band__actions">
+                            <a class="btn btn--accent btn--lg" href="contact.html">Book a Consultation</a>
+                            <a class="btn btn--outline-light btn--lg" href="properties.html">Browse Properties</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a class="logo" href="index.html" aria-label="NESTORA home">
+                        <svg class="logo__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true" focusable="false">
+              <rect x="1.2" y="1.2" width="37.6" height="37.6" rx="11" stroke="currentColor" stroke-opacity="0.28" stroke-width="1.4"/>
+              <path d="M11 21.6 20 13.4l9 8.2" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13.4 20.6V27a1.6 1.6 0 0 0 1.6 1.6h10a1.6 1.6 0 0 0 1.6-1.6v-6.4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="20" cy="24.4" r="1.7" fill="#9e6a44"/>
+            </svg>
+                        <span class="logo__text">
+              <span class="logo__name">NESTORA</span>
+                        <span class="logo__tag">Find a place that feels like home</span>
+                        </span>
+                    </a>
+                    <p class="footer__about">Nestora is a Lagos-based real estate company helping families, professionals and investors buy, sell, rent and manage property across the city's most desirable corridors.</p>
+
+                    <form class="newsletter" data-newsletter novalidate>
+                        <label class="sr-only" for="newsletter-email">Email address</label>
+                        <input class="input" id="newsletter-email" type="email" name="email" placeholder="Your email for new listings" autocomplete="email" required>
+                        <button class="btn btn--accent" type="submit">Subscribe</button>
+                    </form>
+                </div>
+
+                <div class="footer__col">
+                    <h3 class="footer__title">Explore</h3>
+                    <nav class="footer__links" aria-label="Explore">
+                        <a href="properties.html?status=Sale">Buy a property</a>
+                        <a href="properties.html?status=Rent">Rent a property</a>
+                        <a href="properties.html">All listings</a>
+                        <a href="favorites.html">Saved properties</a>
+                        <a href="index.html#locations">Popular locations</a>
+                    </nav>
+                </div>
+
+                <div class="footer__col">
+                    <h3 class="footer__title">Company</h3>
+                    <nav class="footer__links" aria-label="Company">
+                        <a href="about.html">About Nestora</a>
+                        <a href="about.html#team">Our team</a>
+                        <a href="index.html#services">Services</a>
+                        <a href="contact.html?subject=sell">List your property</a>
+                        <a href="contact.html">Contact us</a>
+                    </nav>
+                </div>
+
+                <div class="footer__col footer__col--contact">
+                    <h3 class="footer__title">Visit or call</h3>
+                    <ul class="footer__contact">
+                        <li>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                            <span>14B Admiralty Way,<br>Lekki Phase 1, Lagos</span>
+                        </li>
+                        <li>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.5h2.2l1.4 3.4-1.6 1.4a11 11 0 0 0 5.1 5.1l1.4-1.6 3.4 1.4v2.2a2 2 0 0 1-2.2 2A15.4 15.4 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"/></svg>
+                            <a href="tel:+2348024157788">+234 802 415 7788</a>
+                        </li>
+                        <li>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M4 7.5l8 5.5 8-5.5"/></svg>
+                            <a href="mailto:hello@nestora.ng">hello@nestora.ng</a>
+                        </li>
+                    </ul>
+                    <div class="socials" style="margin-top:1.2rem">
+                        <a class="social-btn" href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Nestora on Instagram">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg>
+                        </a>
+                        <a class="social-btn" href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="Nestora on LinkedIn">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="M8 10.5V16M8 7.8v.2M12 16v-3.2a1.8 1.8 0 0 1 3.6 0V16"/></svg>
+                        </a>
+                        <a class="social-btn" href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Nestora on Facebook">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M14.5 8.5H17V5h-2.5A3.5 3.5 0 0 0 11 8.5V11H9v3.5h2V21h3.5v-6.5H17L17.5 11H14.5V9.3a.8.8 0 0 1 0-.8z"/></svg>
+                        </a>
+                        <a class="social-btn" href="https://wa.me/2348024157788" target="_blank" rel="noopener" aria-label="Chat with Nestora on WhatsApp">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.7a8 8 0 0 1-11.9 7L4 20l1.4-4A8 8 0 1 1 20 11.7z"/><path d="M9.2 9c.3 2.4 2.2 4.3 4.6 4.6l1-1.3 1.7.9v1.3c-2.9.5-6-2.4-6.6-5.4l1.3-.1z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>© <span data-year>2026</span> Nestora Real Estate Ltd. RC 1840392. All rights reserved.</p>
+                <div class="footer__bottom-links">
+                    <!-- <a href="#" data-demo>Privacy Policy</a>
+                    <a href="#" data-demo>Terms of Service</a>
+                    <a href="#" data-demo>Cookies</a> -->
+                    <p class="footer__credit jokpo-signature">
+                        <span class="jokpo-signature__text">Designed &amp; Developed by</span>
+                        <a class="jokpo-signature__link" href="#home">Jokpo Technologies</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

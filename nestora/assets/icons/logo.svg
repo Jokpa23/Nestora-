@@ -1,0 +1,13 @@
+<!-- NESTORA standalone logo lockup: house-inspired mark + wordmark.
+     The site header/footer render this mark inline as SVG so it inherits the
+     current text colour; this file is for decks, invoices and print. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 64" width="320" height="64" role="img" aria-label="Nestora — Find a place that feels like home">
+  <g fill="none" stroke="#171714" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="3" y="9" width="46" height="46" rx="13" stroke-opacity="0.28" stroke-width="1.4"/>
+    <path d="M16 32.5 26 23.2l10 9.3"/>
+    <path d="M19.6 31.4V39a1.8 1.8 0 0 0 1.8 1.8h9.2A1.8 1.8 0 0 0 32.4 39v-7.6"/>
+  </g>
+  <circle cx="26" cy="35.6" r="1.9" fill="#9e6a44"/>
+  <text x="64" y="36" font-family="Manrope, Inter, 'DM Sans', system-ui, sans-serif" font-size="23" font-weight="800" letter-spacing="6.2" fill="#171714">NESTORA</text>
+  <text x="65" y="48" font-family="Manrope, Inter, 'DM Sans', system-ui, sans-serif" font-size="7.4" font-weight="700" letter-spacing="1.9" fill="#7b7568">FIND A PLACE THAT FEELS LIKE HOME</text>
+</svg>

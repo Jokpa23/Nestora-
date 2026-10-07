@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Property Details | NESTORA</title>
+    <meta name="description" content="View full property details, gallery, amenities, specification, agent contact and request an inspection with NESTORA.">
+    <meta name="theme-color" content="#171714">
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="manifest" href="assets/icons/site.webmanifest">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="js/properties.js"></script>
+    <script defer src="js/favorites.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/property-details.js"></script>
+</head>
+
+<body>
+
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- ======================================================================
+       HEADER
+       ====================================================================== -->
+    <header class="header is-scrolled" data-header>
+        <div class="container header__inner">
+            <a class="logo" href="index.html" aria-label="NESTORA home">
+                <svg class="logo__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true" focusable="false">
+          <rect x="1.2" y="1.2" width="37.6" height="37.6" rx="11" stroke="currentColor" stroke-opacity="0.28" stroke-width="1.4"/>
+          <path d="M11 21.6 20 13.4l9 8.2" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M13.4 20.6V27a1.6 1.6 0 0 0 1.6 1.6h10a1.6 1.6 0 0 0 1.6-1.6v-6.4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+          <circle cx="20" cy="24.4" r="1.7" fill="#9e6a44"/>
+        </svg>
+                <span class="logo__text">
+          <span class="logo__name">NESTORA</span>
+                <span class="logo__tag">Find a place that feels like home</span>
+                </span>
+            </a>
+
+            <nav class="nav" aria-label="Primary">
+                <ul class="nav__list">
+                    <li><a class="nav__link" href="properties.html?status=Sale">Buy</a></li>
+                    <li><a class="nav__link" href="properties.html?status=Rent">Rent</a></li>
+                    <li><a class="nav__link" href="contact.html?subject=sell">Sell</a></li>
+                    <li><a class="nav__link" href="properties.html">Properties</a></li>
+                    <li><a class="nav__link" href="about.html">About</a></li>
+                    <li><a class="nav__link" href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="header__actions">
+                <a class="favorites-btn" href="favorites.html" aria-label="Saved properties">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.4A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg>
+                    <span class="favorites-btn__label">Favorites</span>
+                    <span class="favorites-count" data-favorites-count hidden>0</span>
+                </a>
+                <a class="btn btn--accent" href="contact.html?subject=sell">List Your Property</a>
+                <button class="burger" type="button" data-burger aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+          <span></span><span></span><span></span>
+        </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="drawer" id="mobile-menu" data-drawer aria-hidden="true">
+        <div class="drawer__scrim"></div>
+        <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="Site menu">
+            <button class="drawer__close" type="button" data-drawer-close aria-label="Close menu">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+
+            <nav class="drawer__nav" aria-label="Mobile">
+                <a class="drawer__link" href="properties.html?status=Sale">Buy <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+                <a class="drawer__link" href="properties.html?status=Rent">Rent <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+                <a class="drawer__link" href="contact.html?subject=sell">Sell <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+                <a class="drawer__link" href="properties.html">Properties <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+                <a class="drawer__link" href="about.html">About <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+                <a class="drawer__link" href="contact.html">Contact <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></a>
+            </nav>
+            <div class="drawer__foot">
+                <a class="btn btn--accent btn--block" href="contact.html?subject=sell">List Your Property</a>
+                <a class="btn btn--ghost btn--block" href="favorites.html">Saved Properties</a>
+                <div class="drawer__meta">
+                    <a href="tel:+2348024157788">+234 802 415 7788</a>
+                    <a href="mailto:hello@nestora.ng">hello@nestora.ng</a>
+                    <span>14B Admiralty Way, Lekki Phase 1, Lagos</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main id="main">
+
+        <!-- ====================================================================
+         BREADCRUMB
+         ==================================================================== -->
+        <div class="container" style="padding-top:calc(var(--header-h) + 1.6rem)">
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+                <a href="index.html">Home</a>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+                <a href="properties.html">Properties</a>
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+                <span aria-current="page" id="crumb-name">Property</span>
+            </nav>
+        </div>
+
+        <!-- ====================================================================
+         MISSING PROPERTY STATE (shown by JS when ?id= is unknown)
+         ==================================================================== -->
+        <section class="section section--tight" id="property-missing" hidden>
+            <div class="container">
+                <div class="empty-state" data-reveal>
+                    <span class="empty-state__icon">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5.4c0 4.3-2.9 7.4-7 9.6-4.1-2.2-7-5.3-7-9.6V6z"/><path d="M12 10v3M12 16h.01"/></svg>
+          </span>
+                    <h1 style="font-size:clamp(1.5rem,3vw,2rem)">That property is no longer listed</h1>
+                    <p>The listing may have been sold, let or withdrawn. Explore our current portfolio instead — or tell us what you're looking for.</p>
+                    <div style="display:flex;gap:0.6rem;justify-content:center;flex-wrap:wrap">
+                        <a class="btn btn--accent" href="properties.html">Browse Properties</a>
+                        <a class="btn btn--ghost" href="contact.html">Talk to a Consultant</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================================
+         PROPERTY ROOT — everything below is rendered from js/property-details.js
+         ==================================================================== -->
+        <div id="property-root">
+
+            <section class="section section--tight" style="padding-top:1.8rem">
+                <div class="container">
+                    <div class="detail-layout">
+
+                        <!-- ---------------- MAIN COLUMN ---------------- -->
+                        <div>
+                            <!-- GALLERY -->
+                            <div class="gallery">
+                                <div class="gallery__stage" id="gallery-stage">
+                                    <div class="gallery__stage-badges" id="gallery-badges"></div>
+                                    <button class="fav-btn fav-btn--floating" type="button" id="detail-fav" data-fav="" aria-label="Save property" hidden>
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.4A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg>
+                  </button>
+                                    <!-- MAIN IMAGE — swapped by the thumbnail rail below -->
+                                    <img id="gallery-image" src="assets/images/properties/property-01.webp" alt="Property photograph" width="1280" height="853" decoding="async">
+                                    <p class="gallery__counter" id="gallery-counter">1 / 5</p>
+                                    <button class="gallery__nav gallery__nav--prev" type="button" id="gallery-prev" aria-label="Previous image">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>
+                  </button>
+                                    <button class="gallery__nav gallery__nav--next" type="button" id="gallery-next" aria-label="Next image">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>
+                  </button>
+                                </div>
+                                <!-- Thumbnails (replace the WebP files in assets/images/properties/) -->
+                                <div class="gallery__thumbs" id="gallery-thumbs"></div>
+                            </div>
+
+                            <!-- HEADLINE -->
+                            <div class="detail-head" style="margin-top:2rem">
+                                <div>
+                                    <div class="pill-list" id="detail-badges" style="margin-bottom:0.9rem"></div>
+                                    <h1 id="detail-name">Property name</h1>
+                                    <p class="card__location text-sm" id="detail-location" style="margin-top:0.6rem"></p>
+                                </div>
+                                <div style="text-align:right">
+                                    <p class="detail-head__price" id="detail-price"></p>
+                                </div>
+                            </div>
+
+                            <div class="detail-meta" id="detail-meta" style="margin-top:1.6rem" data-reveal></div>
+
+                            <!-- DESCRIPTION -->
+                            <section class="section section--tight" style="padding-bottom:0">
+                                <p class="eyebrow" id="detail-eyebrow-type">Detached duplex · Lekki, Lagos</p>
+                                <h2 style="font-size:clamp(1.45rem,2.4vw,1.9rem);margin-top:0.8rem">About this property</h2>
+                                <div class="prose" id="detail-description" style="margin-top:1.1rem;max-width:74ch"></div>
+
+                                <h3 style="margin-top:2.4rem;font-size:1.25rem">Property Features</h3>
+                                <ul class="features-list" id="detail-features" style="margin-top:1.2rem"></ul>
+                            </section>
+
+                            <!-- SPECIFICATION -->
+                            <section class="section section--tight">
+                                <h3 style="font-size:1.25rem">Property Details</h3>
+                                <div class="spec-table" id="detail-specs" style="margin-top:1.2rem"></div>
+                            </section>
+
+                            <!-- LOCATION -->
+                            <section class="section section--tight" style="padding-top:0">
+                                <h3 style="font-size:1.25rem">Property Location</h3>
+                                <p class="lead" style="margin-top:0.7rem;font-size:0.95rem">A stylised map keeps this demo dependency-free — swap in a live map provider when you deploy the site for a client.</p>
+
+                                <div class="map-block" style="margin-top:1.2rem" data-reveal="zoom">
+                                    <!-- Styled map: grid + roads are pure CSS/SVG, no tile provider required -->
+                                    <div class="map-block__grid" aria-hidden="true"></div>
+                                    <div class="map-block__water" aria-hidden="true"></div>
+                                    <div class="map-block__park" aria-hidden="true"></div>
+                                    <svg class="map-block__canvas-roads" viewBox="0 0 800 500" preserveAspectRatio="none" aria-hidden="true">
+                    <path d="M-20 150 C 160 140, 320 220, 520 200 C 650 188, 720 150, 840 160" fill="none" stroke="#ffffff" stroke-width="16"/>
+                    <path d="M-20 150 C 160 140, 320 220, 520 200 C 650 188, 720 150, 840 160" fill="none" stroke="#ddd5c7" stroke-width="1.4"/>
+                    <path d="M120 -20 C 140 120, 90 300, 170 520" fill="none" stroke="#ffffff" stroke-width="12"/>
+                    <path d="M120 -20 C 140 120, 90 300, 170 520" fill="none" stroke="#ddd5c7" stroke-width="1.2"/>
+                    <path d="M420 -20 C 400 140, 470 320, 430 520" fill="none" stroke="#ffffff" stroke-width="12"/>
+                    <path d="M620 -20 C 600 160, 660 300, 610 520" fill="none" stroke="#ffffff" stroke-width="10"/>
+                    <path d="M-20 330 C 200 320, 380 380, 560 350 C 660 334, 720 300, 840 320" fill="none" stroke="#ffffff" stroke-width="9"/>
+                  </svg>
+                                    <span class="map-pin-float" aria-hidden="true">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                  </span>
+
+                                    <div class="map-block__inner">
+                                        <div class="map-card">
+                                            <span class="map-card__pin">
+                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                      </span>
+                                            <p class="map-card__title">Property Location</p>
+                                            <p class="map-card__address" id="map-address"></p>
+                                            <p class="map-card__note">Exact coordinates and gate access are shared once an inspection is confirmed. <span id="map-pin-label"></span></p>
+                                        </div>
+                                        <div class="map-legend" id="map-landmarks"></div>
+                                    </div>
+                                </div>
+                            </section>
+                        </div>
+
+                        <!-- ---------------- SIDEBAR ---------------- -->
+                        <aside class="sidebar">
+
+                            <!-- Price + primary actions -->
+                            <div class="panel price-card" data-reveal>
+                                <p class="price-card__value" id="panel-price">₦0</p>
+                                <div id="panel-price-rows"></div>
+
+                                <div class="price-card__actions">
+                                    <a class="btn btn--accent btn--lg btn--block" href="#request-viewing">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2.5"/><path d="M8 3v4M16 3v4M3.5 10h17"/></svg>                                        Schedule Inspection
+                                    </a>
+                                    <button class="btn btn--ghost btn--lg btn--block" type="button" data-modal-open="agent-modal">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.5h2.2l1.4 3.4-1.6 1.4a11 11 0 0 0 5.1 5.1l1.4-1.6 3.4 1.4v2.2a2 2 0 0 1-2.2 2A15.4 15.4 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"/></svg>
+                    Contact Agent
+                  </button>
+                                    <div style="display:flex;gap:0.5rem">
+                                        <button class="btn btn--ghost btn--block" type="button" id="detail-share" data-share="" hidden>
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7"/><path d="M8 7h9v9"/></svg>
+                      Share
+                    </button>
+                                        <button class="btn btn--ghost btn--block" type="button" data-fav="" id="detail-fav-inline" hidden>
+                      <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20s-7-4.4-7-9.4A4.6 4.6 0 0 1 12 7a4.6 4.6 0 0 1 7 3.6c0 5-7 9.4-7 9.4z"/></svg>
+                      Save
+                    </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Agent card -->
+                            <div class="panel" data-reveal>
+                                <div class="agent-card__top">
+                                    <span id="agent-photo"></span>
+                                    <div>
+                                        <p class="agent-card__name" id="agent-name">David Williams</p>
+                                        <p class="agent-card__role" id="agent-role">Senior Property Consultant</p>
+                                    </div>
+                                </div>
+                                <p class="agent-card__meta" id="agent-meta"></p>
+
+                                <div class="agent-card__actions">
+                                    <a class="agent-action" id="agent-phone" href="tel:+2348024157788">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.5h2.2l1.4 3.4-1.6 1.4a11 11 0 0 0 5.1 5.1l1.4-1.6 3.4 1.4v2.2a2 2 0 0 1-2.2 2A15.4 15.4 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"/></svg>                                        Call
+                                    </a>
+                                    <a class="agent-action agent-action--wa" id="agent-whatsapp" href="https://wa.me/2348024157788">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.7a8 8 0 0 1-11.9 7L4 20l1.4-4A8 8 0 1 1 20 11.7z"/><path d="M9.2 9c.3 2.4 2.2 4.3 4.6 4.6l1-1.3 1.7.9v1.3c-2.9.5-6-2.4-6.6-5.4l1.3-.1z"/></svg>                                        WhatsApp
+                                    </a>
+                                    <a class="agent-action" id="agent-email" href="mailto:hello@nestora.ng">
+                                        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M4 7.5l8 5.5 8-5.5"/></svg>                                        Email
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Viewing request form -->
+                            <div class="panel" id="request-viewing" data-reveal>
+                                <h2 class="panel__title">Request a Viewing</h2>
+                                <p class="text-sm text-muted" style="margin-top:0.4rem">Your consultant <strong id="viewing-agent-name">David Williams</strong> will confirm a time within one business hour.</p>
+
+                                <form class="viewing-form" style="margin-top:1.2rem" data-validate novalidate data-success-title="Inspection requested" data-success="Thank you. Your consultant will call to confirm your preferred date and time.">
+                                    <input type="hidden" id="viewing-property" name="property" value="">
+
+                                    <div class="field">
+                                        <label for="viewing-name">Name</label>
+                                        <input class="input" type="text" id="viewing-name" name="name" placeholder="Your full name" autocomplete="name" required data-label="Name">
+                                        <p class="field-error" aria-live="polite"></p>
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="viewing-email">Email</label>
+                                        <input class="input" type="email" id="viewing-email" name="email" placeholder="you@email.com" autocomplete="email" required data-rule="email" data-label="Email">
+                                        <p class="field-error" aria-live="polite"></p>
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="viewing-phone">Phone</label>
+                                        <input class="input" type="tel" id="viewing-phone" name="phone" placeholder="0802 415 7788" autocomplete="tel" required data-rule="phone" data-label="Phone number">
+                                        <p class="field-error" aria-live="polite"></p>
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="viewing-date">Preferred Date</label>
+                                        <input class="input" type="date" id="viewing-date" name="date" required data-rule="date-future" data-label="Preferred date">
+                                        <p class="field-error" aria-live="polite"></p>
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="viewing-message">Message</label>
+                                        <textarea class="textarea" id="viewing-message" name="message" placeholder="Tell us the times that suit you, or ask a question about the property." data-rule="minlength:10" data-label="Message"></textarea>
+                                        <p class="field-error" aria-live="polite"></p>
+                                    </div>
+
+                                    <button class="btn btn--accent btn--block btn--lg" type="submit">Request Inspection</button>
+                                    <p class="form-note">By submitting you agree to be contacted about this property. No spam, ever.</p>
+                                </form>
+                            </div>
+                        </aside>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ==================================================================
+           SIMILAR PROPERTIES
+           ================================================================== -->
+            <section class="section section--sand">
+                <div class="container">
+                    <div class="section-head-row section-head">
+                        <div>
+                            <p class="eyebrow">You may also like</p>
+                            <h2>Similar properties</h2>
+                        </div>
+                        <a class="link-arrow" href="properties.html">
+              View all listings
+              <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+            </a>
+                    </div>
+                    <div class="grid-properties" id="similar-grid" style="margin-top:2.2rem"></div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- ======================================================================
+       CONTACT AGENT MODAL
+       ====================================================================== -->
+    <div class="modal" id="agent-modal" role="dialog" aria-modal="true" aria-labelledby="agent-modal-title" aria-hidden="true">
+        <div class="modal__scrim" data-modal-close></div>
+        <div class="modal__dialog">
+            <button class="modal__close" type="button" data-modal-close aria-label="Close dialog">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+            <p class="eyebrow">Enquire</p>
+            <h2 id="agent-modal-title" style="font-size:1.4rem;margin-top:0.6rem">Contact the agent</h2>
+            <p class="text-sm text-muted" style="margin-top:0.5rem">Send a message about this listing and we'll reply the same working day.</p>
+
+            <form class="viewing-form" style="margin-top:1.3rem" data-validate novalidate data-success-title="Message sent" data-success="Your enquiry has reached the agent. Expect a reply shortly.">
+                <input type="hidden" id="modal-property" name="property" value="">
+
+                <div class="field">
+                    <label for="modal-name">Name</label>
+                    <input class="input" type="text" id="modal-name" name="name" required data-label="Name">
+                    <p class="field-error" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                    <label for="modal-email">Email</label>
+                    <input class="input" type="email" id="modal-email" name="email" required data-rule="email" data-label="Email">
+                    <p class="field-error" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                    <label for="modal-phone">Phone</label>
+                    <input class="input" type="tel" id="modal-phone" name="phone" required data-rule="phone" data-label="Phone number">
+                    <p class="field-error" aria-live="polite"></p>
+                </div>
+                <div class="field">
+                    <label for="modal-message">Message</label>
+                    <textarea class="textarea" id="modal-message" name="message" style="min-height:96px" placeholder="I'd like more information about this property…" data-rule="minlength:10" data-label="Message"></textarea>
+                    <p class="field-error" aria-live="polite"></p>
+                </div>
+                <button class="btn btn--accent btn--block" type="submit">Send Enquiry</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+       FOOTER
+       ====================================================================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <a class="logo" href="index.html" aria-label="NESTORA home">
+                        <svg class="logo__mark" viewBox="0 0 40 40" fill="none" aria-hidden="true" focusable="false">
+              <rect x="1.2" y="1.2" width="37.6" height="37.6" rx="11" stroke="currentColor" stroke-opacity="0.28" stroke-width="1.4"/>
+              <path d="M11 21.6 20 13.4l9 8.2" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13.4 20.6V27a1.6 1.6 0 0 0 1.6 1.6h10a1.6 1.6 0 0 0 1.6-1.6v-6.4" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="20" cy="24.4" r="1.7" fill="#9e6a44"/>
+            </svg>
+                        <span class="logo__text">
+              <span class="logo__name">NESTORA</span>
+                        <span class="logo__tag">Find a place that feels like home</span>
+                        </span>
+                    </a>
+                    <p class="footer__about">Nestora is a Lagos-based real estate company helping families, professionals and investors buy, sell, rent and manage property across the city's most desirable corridors.</p>
+
+                    <form class="newsletter" data-newsletter novalidate>
+                        <label class="sr-only" for="newsletter-email">Email address</label>
+                        <input class="input" id="newsletter-email" type="email" name="email" placeholder="Your email for new listings" autocomplete="email" required>
+                        <button class="btn btn--accent" type="submit">Subscribe</button>
+                    </form>
+                </div>
+
+                <div class="footer__col">
+                    <h3 class="footer__title">Explore</h3>
+                    <nav class="footer__links" aria-label="Explore">
+                        <a href="properties.html?status=Sale">Buy a property</a>
+                        <a href="properties.html?status=Rent">Rent a property</a>
+                        <a href="properties.html">All listings</a>
+                        <a href="favorites.html">Saved properties</a>
+                        <a href="index.html#locations">Popular locations</a>
+                    </nav>
+                </div>
+
+                <div class="footer__col">
+                    <h3 class="footer__title">Company</h3>
+                    <nav class="footer__links" aria-label="Company">
+                        <a href="about.html">About Nestora</a>
+                        <a href="about.html#team">Our team</a>
+                        <a href="index.html#services">Services</a>
+                        <a href="contact.html?subject=sell">List your property</a>
+                        <a href="contact.html">Contact us</a>
+                    </nav>
+                </div>
+
+                <div class="footer__col footer__col--contact">
+                    <h3 class="footer__title">Visit or call</h3>
+                    <ul class="footer__contact">
+                        <li>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.5 7-11a7 7 0 1 0-14 0c0 5.5 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
+                            <span>14B Admiralty Way,<br>Lekki Phase 1, Lagos</span>
+                        </li>
+                        <li>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.6 3.5h2.2l1.4 3.4-1.6 1.4a11 11 0 0 0 5.1 5.1l1.4-1.6 3.4 1.4v2.2a2 2 0 0 1-2.2 2A15.4 15.4 0 0 1 4.6 5.7a2 2 0 0 1 2-2.2z"/></svg>
+                            <a href="tel:+2348024157788">+234 802 415 7788</a>
+                        </li>
+                        <li>
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5.5" width="18" height="13" rx="2.5"/><path d="M4 7.5l8 5.5 8-5.5"/></svg>
+                            <a href="mailto:hello@nestora.ng">hello@nestora.ng</a>
+                        </li>
+                    </ul>
+                    <div class="socials" style="margin-top:1.2rem">
+                        <a class="social-btn" href="https://www.instagram.com" target="_blank" rel="noopener" aria-label="Nestora on Instagram">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="3.6"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg>
+                        </a>
+                        <a class="social-btn" href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="Nestora on LinkedIn">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4"/><path d="M8 10.5V16M8 7.8v.2M12 16v-3.2a1.8 1.8 0 0 1 3.6 0V16"/></svg>
+                        </a>
+                        <a class="social-btn" href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Nestora on Facebook">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="M14.5 8.5H17V5h-2.5A3.5 3.5 0 0 0 11 8.5V11H9v3.5h2V21h3.5v-6.5H17L17.5 11H14.5V9.3a.8.8 0 0 1 0-.8z"/></svg>
+                        </a>
+                        <a class="social-btn" href="https://wa.me/2348024157788" target="_blank" rel="noopener" aria-label="Chat with Nestora on WhatsApp">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 11.7a8 8 0 0 1-11.9 7L4 20l1.4-4A8 8 0 1 1 20 11.7z"/><path d="M9.2 9c.3 2.4 2.2 4.3 4.6 4.6l1-1.3 1.7.9v1.3c-2.9.5-6-2.4-6.6-5.4l1.3-.1z"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer__bottom">
+                <p>© <span data-year>2026</span> Nestora Real Estate Ltd. RC 1840392. All rights reserved.</p>
+                <div class="footer__bottom-links">
+                    <!-- <a href="#" data-demo>Privacy Policy</a>
+                    <a href="#" data-demo>Terms of Service</a>
+                    <a href="#" data-demo>Cookies</a> -->
+                    <p class="footer__credit jokpo-signature">
+                        <span class="jokpo-signature__text">Designed &amp; Developed by</span>
+                        <a class="jokpo-signature__link" href="#home">Jokpo Technologies</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
